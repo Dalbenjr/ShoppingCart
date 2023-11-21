@@ -8,16 +8,12 @@ $(document).ready(function () {
       var subtotal = price * quantityInput;
       if (!isNaN(subtotal)) {
         totalCost += subtotal;
-        if (!isNaN(subtotal)) {
-          totalCost += subtotal;
-          $(ele).children('.cost').html('£' + subtotal);
-        }
+        $(ele).children('.cost').html('£' + subtotal);
       }
     });
 
     $('#totalValue').text(totalCost);
   };
-      
 
   $('table').on('input', 'tr input', function () {
     updateValue();
